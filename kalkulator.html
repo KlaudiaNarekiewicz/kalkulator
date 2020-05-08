@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<center>
+    <input type="text" id="a" placeholder="a" />
+    <input type="text" id="b" placeholder="b" />
+    <input type="text" id="wynik" placeholder="=">
+    <br><button type="button" onclick="klik(this.innerHTML)">+</button> 
+    <button type="button" onclick="klik(this.innerHTML)">-</button>
+    <button type="button" onclick="klik(this.innerHTML)">x</button>   
+    <button type="button" onclick="klik(this.innerHTML)">/</button>
+</center>
+</body>
+<script>
+function klik(cos) 
+{
+    var a = document.getElementById('a').value;
+    var b = document.getElementById('b').value;  
+ 
+    switch(cos) 
+    {
+		case '+':
+			var wynik = parseFloat(a) + parseFloat(b);         
+		break;
+		
+		case '-':
+			var wynik = parseFloat(a) - parseFloat(b);         
+		break;  
+		
+		case 'x':
+			var wynik = parseFloat(a) * parseFloat(b);         
+		break; 
+		
+		case '/':
+			var wynik = parseFloat(a) / parseFloat(b);         
+		break;    
+	}
+	document.getElementById('wynik').value = '= ' + wynik;
+}
+</script>
+</body>
+</html>
